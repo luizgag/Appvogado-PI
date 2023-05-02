@@ -9,3 +9,10 @@ class CadastroAdvogadoForm(forms.ModelForm):
             'nome', 'email', 'sobre', 'telefone', 'endereco',
             'anos_experiencia', 'especialidade'
         ]
+
+class LoginForm(forms.ModelForm):
+    class Meta:
+        model = Advogado
+        fields = [
+            'email', 'senha'
+        ]
