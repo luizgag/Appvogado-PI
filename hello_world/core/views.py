@@ -17,3 +17,12 @@ def login(request):
             "title": "Login",
         },
     )
+
+def faq(request):
+    return render(
+        request,
+        "faq.html",
+        {
+            "title": "FAQ",
+        },
+    )
