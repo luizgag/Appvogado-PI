@@ -9,7 +9,8 @@ class Usuario(models.Model):
     tipo = None
 
     class Meta:
-        abstract = True
+        # abstract = True
+        app_label = 'core'
 
 
 class Advogado(Usuario):

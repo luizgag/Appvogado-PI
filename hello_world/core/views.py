@@ -24,5 +24,5 @@ def login(request):
         login(request, user)
         return redirect("index.html")
     else:
-        form.add_error(None, "Invalid username or password")
+        # form.add_error(None, "Invalid username or password")
         return render(request, "login.html", {"form": form})

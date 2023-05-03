@@ -1,5 +1,5 @@
 from django import forms
-from .models import Advogado
+from .models import Advogado, Usuario
 
 
 class CadastroAdvogadoForm(forms.ModelForm):
@@ -12,7 +12,7 @@ class CadastroAdvogadoForm(forms.ModelForm):
 
 class LoginForm(forms.ModelForm):
     class Meta:
-        model = Advogado
+        model = Usuario
         fields = [
             'email', 'senha'
         ]
