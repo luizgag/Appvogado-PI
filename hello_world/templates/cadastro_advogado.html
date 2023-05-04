@@ -1,0 +1,20 @@
+<!-- cadastro_advogado.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+
+<html>
+<head>
+<title>Cadastro</title>
+</head>
+<body>
+<h1>Cadastro</h1>
+<form method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Cadastrar</button>
+</form>
+</body>
+</html>
+
+{% endblock %}

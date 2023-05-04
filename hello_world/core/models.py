@@ -17,7 +17,7 @@ class Advogado(Usuario):
 
     especialidade = models.CharField(max_length=100)
     sobre = models.TextField()
-    anos_experiencia = models.IntegerField()
+    anos_de_experiencia = models.IntegerField()
     tipo = 'Advogado'
 
     class Meta:

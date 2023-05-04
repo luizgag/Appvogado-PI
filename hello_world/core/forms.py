@@ -7,7 +7,7 @@ class CadastroAdvogadoForm(forms.ModelForm):
         model = Advogado
         fields = [
             'nome', 'email', 'sobre', 'telefone', 'endereco',
-            'anos_experiencia', 'especialidade'
+            'anos_de_experiencia', 'especialidade'
         ]
 
 class LoginForm(forms.ModelForm):

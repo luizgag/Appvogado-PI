@@ -26,3 +26,15 @@ def login(request):
     else:
         # form.add_error(None, "Invalid username or password")
         return render(request, "login.html", {"form": form})
+    
+def cadastro_advogado(request):
+    if request.method == 'POST':
+        form = CadastroAdvogadoForm(request.POST)
+        print(form.errors)
+        if form.is_valid():
+
+            form.save()
+            return redirect('index')
+    else:
+        form = CadastroAdvogadoForm()
+    return render(request, 'cadastro_advogado.html', {'form': form})
