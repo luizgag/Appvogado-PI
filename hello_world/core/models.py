@@ -1,6 +1,7 @@
 from django.db import models
 
 class Usuario(models.Model):
+
     nome = models.CharField(max_length=100)
     email = models.EmailField()
     telefone = models.CharField(max_length=20)
@@ -11,6 +12,9 @@ class Usuario(models.Model):
     class Meta:
         # abstract = True
         app_label = 'core'
+
+    def __str__(self): 
+        return self.nome
 
 
 class Advogado(Usuario):
@@ -23,12 +27,18 @@ class Advogado(Usuario):
     class Meta:
         app_label = 'core'
 
+    def __str__(self): 
+        return self.nome
+
 class Cliente(Usuario):
 
     tipo = 'Cliente'
 
     class Meta:
         app_label = 'core'
+    
+    def __str__(self): 
+        return self.nome
 
 class Depoimento(models.Model):
     texto = models.TextField()
@@ -41,12 +51,12 @@ class Depoimento(models.Model):
     class Meta:
         app_label = 'core'
 
-class Compromisso(models.Model):
-    data_horario = models.DateTimeField()
-    advogado = models.ForeignKey(Advogado,on_delete=models.CASCADE)
-    cliente = models.ForeignKey(Cliente,on_delete=models.CASCADE,blank=True,null=True)
-    descricao = models.TextField(blank=True)
+# class Compromisso(models.Model):
+#     data_horario = models.DateTimeField()
+#     advogado = models.ForeignKey(Advogado,on_delete=models.CASCADE)
+#     cliente = models.ForeignKey(Cliente,on_delete=models.CASCADE,blank=True,null=True)
+#     descricao = models.TextField(blank=True)
 
-    class Meta:
-        app_label = 'core'
+#     class Meta:
+#         app_label = 'core'
   
