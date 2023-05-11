@@ -19,11 +19,12 @@ from django.urls import path, include
 from hello_world.core import views as core_views
 
 urlpatterns = [
-    path("", core_views.index),
+    path("", core_views.index, name="index"),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
     path("login/", core_views.login),
     path("faq/", core_views.faq)
+    path("cadastro_advogado/", core_views.cadastro_advogado,name='cadastro_advogado'),
 ]
 
 
