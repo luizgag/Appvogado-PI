@@ -10,9 +10,19 @@ def index(request):
             "title": "Django example",
         },
     )
-
+  
+def faq(request):
+    return render(
+        request,
+        "faq.html",
+        {
+            "title": "FAQ",
+        },
+    )
+  
 def login(request):
-    form = LoginForm()
+
+  form = LoginForm()
     user = None
     if request.method == "POST":
         form = LoginForm(request.POST)
