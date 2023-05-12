@@ -22,7 +22,7 @@ def faq(request):
   
 def login(request):
 
-  form = LoginForm()
+    form = LoginForm()
     user = None
     if request.method == "POST":
         form = LoginForm(request.POST)
