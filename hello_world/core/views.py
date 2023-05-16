@@ -19,7 +19,16 @@ def faq(request):
             "title": "FAQ",
         },
     )
-  
+
+def triagem(request):
+    return render(
+        request,
+        "triagem.html",
+        {
+            "title": "Triagem",
+        },
+    )
+
 def login(request):
 
     form = LoginForm()

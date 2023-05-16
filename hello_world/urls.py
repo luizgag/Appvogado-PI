@@ -25,6 +25,7 @@ urlpatterns = [
     path("login/", core_views.login),
     path("faq/", core_views.faq, name="faq"),
     path("cadastro_advogado/", core_views.cadastro_advogado,name='cadastro_advogado'),
+    path("triagem/", core_views.triagem,name='triagem'),
 ]
 
 

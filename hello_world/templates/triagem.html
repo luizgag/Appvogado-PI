@@ -6,36 +6,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>QUAL SUA NECESSIDADE JURIDICA</title>
+	<title>TRIAGEM</title>
 </head>
 	<style>
 		body {
-		background-image: url(https://drive.google.com/file/d/1ssFk5jpv0vAQACXtTT3xaPzwUnnVciRB/view?usp=share_link);
+		background-image: url(https://i1.wp.com/www.forquilhinhanoticias.com.br/wp-content/uploads/2017/05/advocacia.jpg?fit=817%2C416&ssl=1);
 		background-repeat:no-repeat;
-		background-size: 30% 30%;
+		background-size: 18% 18%;
 		}
 	</style>
 	</head>
 	<body>
-	
+
+	<br>
 	<center><h1 style="color:Tomato;"><font size="15">TRIAGEM</center></h1></font>
 <body>
 	<br>
 	<br>
-	<center><p style="color:rgb(71, 86, 255);"><font size="5">Problemas com seus direitos?</center></p></font>
-    <br>
-	<center><li>Direito trabalhista</li>
-	    <img src="https://1.bp.blogspot.com/-CHdpPbC75Bk/WnjSkVo6lRI/AAAAAAAAC9k/e0ZdIRix33EC0vHq-AY786Zwy12qDx1KACLcBGAs/w1200-h630-p-k-no-nu/Litigiosidade.png" style="width:100px;height:100px;"></center>
-	<br>
-		<center><li>Direito civil</li>
-		<img src="https://th.bing.com/th/id/R.b7474c1bf05f5c948da21cc85bd5bda7?rik=Br6TV%2bB39SttCw&riu=http%3a%2f%2fdsl.adv.br%2fupl%2fareas_de_atuacao%2fDireito_Civil_895.jpg&ehk=79WOHMWvXf3C4a0q0PP9bxYFjITtBij6V0jN3zrX3II%3d&risl=&pid=ImgRaw&r=0" style="width:100px;height:100px;"></center>
-	<br>
-		<center><li>Direito penal</li>
-		<img src="https://s3.amazonaws.com/alfacon-wordpress-blogs/wp-content/uploads/sites/9/2021/07/28132828/Direito-penal-1-1068x706.jpg" style="width:100px;height:100px;"></center>
+<center>
+	<p style="background-color:DodgerBlue;"<mark>Por favor, selecione os campos abaixo para realizarmos o encaminhamento aos nossos colaboradores</mark></p>
+	<p style="color:rgb(71, 86, 255);"><font size="5">Qual a áre que necessita de apoio jurídico?</p></font>
+	<form method="post" action="Area-enquete.php">
+		<select name="Area">
+			<option value="D_Civil">Direito Civil</option>
+			<option value="D_trab">Direito Trabalhista</option>
+			<option value="D_penal">Direito Penal</option>
+			<option value="D_trib">Direito Tributário</option>
+			<option value="D_eleit">Direito Eleitoral</option>
+			<option value="D_amb">Direito Ambiental</option>
+		</select>
+	<input type="submit" value="Enviar" />
+	<input type="reset" value="Cancelar" />
+	</form>
 
-		<center><p style="color:rgb(71, 86, 255);"><font size="5">Somos especialistas e oferecemos a atenção que seu caso precisa.</p></center></font>
-    </p>
-		<center><p style="background-color:DodgerBlue;"<mark>QUERO UMA ORIENTAÇÃO</mark></p></center>
+
+	<p style="color:rgb(71, 86, 255);"><font size="5">Como descobriu sua necessidade?</p></font>
+	<form method="post" action="Necessidade-enquete.php">
+		<select name="Necess">
+			<option value="Nec_IJ">Intimação Judicial</option>
+			<option value="Nec_IEJ">Intimação Extra Judicial</option>
+			<option value="Nec_BC">Bloqueio de Contas</option>
+			<option value="Nec_P">Necessidades Pessoais</option>
+		</select>
+	<input type="submit" value="Enviar" />
+	<input type="reset" value="Cancelar" />
+	</form>
+
+	<p style="color:rgb(71, 86, 255);"><font size="5">Quem necessita de apoio jurídico?</p></font>
+	<form method="post" action="Quem-enquete.php">
+		<select name="Quem">
+			<option value="Quem_vc">Você</option>
+			<option value="Quem_Out">Outra pessoa</option>
+			<option value="Quem_emp">Uma empresa</option>
+			<option value="Quem_col">Um coletivo</option>
+		</select>
+	<input type="submit" value="Enviar" />
+	<input type="reset" value="Cancelar" />
+	</form>
+
+	<p style="color:rgb(71, 86, 255);"><font size="5">Qual o grau de urgência?</p></font>
+	<form method="post" action="Urgencia-enquete.php">
+		<select name="Urg">
+			<option value="Urg_bx">Baixo</option>
+			<option value="Urg_md">Médio</option>
+			<option value="Urg_al">Alto</option>
+			<option value="Urg_cr">Crítico</option>
+		</select>
+	<input type="submit" value="Enviar" />
+	<input type="reset" value="Cancelar" />
+	</form>
+
+	<p style="color:rgb(71, 86, 255);"><font size="5">Pessoas em vulnerabilidade social ou sem recursos financeiros podem solicitar atendimento voluntário:</p></font>
+	<form method="post" action="Volunt-enquete.php">
+		<select name="Vol">
+			<option value="Vol_sim">Sim, necessito de atendimento voluntário</option>
+			<option value="Vol_nao">Não há necessidade</option>
+		</select>
+	<input type="submit" value="Enviar" />
+	<input type="reset" value="Cancelar" />
+	</form>
+
+	<p style="color:rgb(71, 86, 255);"><font size="5">Descreva detalhadamente sua necessidade:</p></font>
+	<form method="post" action="desc_necessidade.php">
+		<textarea cols="60" rows="15"></textarea>
+		<br />
+		<input type="submit" value="Enviar" />
+		<input type="reset" value="Cancelar" />
+	</form>
+
+</center>
 
 	</ul>
 </body>
